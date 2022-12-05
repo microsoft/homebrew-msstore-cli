@@ -5,6 +5,10 @@ if (!$version) {
     return;
 }
 
+if ($version.StartsWith('v')) {
+    $version = $version.Substring(1)
+}
+
 Copy-Item $PSScriptRoot\msstore-cli.rb.template -Destination $PSScriptRoot\Formula\msstore-cli.rb -Force
 
 $x64Content = Get-Content *x64*.sha256.txt
