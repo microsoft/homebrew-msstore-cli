@@ -7,8 +7,8 @@ class MSStoreCLI < Formula
     url 
     url Hardware::CPU.arch == :arm64 ? "https://github.com/microsoft/msstore-cli/releases/download/v0.1.8/MSStoreCLI-osx.12-arm64.tar.gz" :
                                        "https://github.com/microsoft/msstore-cli/releases/download/v0.1.8/MSStoreCLI-osx.12-x64.tar.gz"
-    sha256 Hardware::CPU.arch == :arm64 ? "3247de22a73054521ab86e5a8b0fdb476cf6c9cd242c1fd3470a5d272a9e20a9" :
-                                        "26a8cbe52f56e8304936d2a48736c4196f27169d345ef2e7c9fa20ddf8c495db"
+    sha256 Hardware::CPU.arch == :arm64 ? "2667d7e73a1a44c2a1549fdd33376ed7ced8e3718ec8703171df8e3178b32f0e" :
+                                        "d2ff11f95975312dc25d0332d655589018af841947e8730c58fb7947afb49891"
     license "MIT"
     version "0.1.8"
 
