@@ -4,12 +4,25 @@
 class MsstoreCli < Formula
     desc "Microsoft Store Command Line Tool"
     homepage "https://github.com/microsoft/msstore-cli"
-    url Hardware::CPU.arch == :arm64 ? "https://github.com/microsoft/msstore-cli/releases/download/vMSSTORECLI_VERSION/MSStoreCLI-osx.12-arm64.tar.gz" :
-                                       "https://github.com/microsoft/msstore-cli/releases/download/vMSSTORECLI_VERSION/MSStoreCLI-osx.12-x64.tar.gz"
-    sha256 Hardware::CPU.arch == :arm64 ? "MSSTORECLI_ARM64_URLSHA256" :
-                                        "MSSTORECLI_X64_URLSHA256"
     license "MIT"
     version "MSSTORECLI_VERSION"
+    checksums = {
+      "osx.12-arm64" => "MSSTORECLI_OSX_ARM64_URLSHA256",
+      "osx.12-x64" => "MSSTORECLI_OSX_X64_URLSHA256",
+      "linux-arm64"  => "MSSTORECLI_LINUX_ARM64_URLSHA256",
+      "linux-x64"  => "MSSTORECLI_LINUX_X64_URLSHA256"
+    }
+
+    os = OS.mac? ? "osx.12" : "linux"
+    arch = case Hardware::CPU.arch
+    when :x86_64 then "x64"
+    when :arm64 then "arm64"
+    else
+      raise "Unsupported arch #{Hardware::CPU.arch}"
+    end
+
+    url "https://github.com/microsoft/msstore-cli/releases/download/v#{version}/MSStoreCLI-#{os}-#{arch}.tar.gz"
+    sha256 checksums["#{os}-#{arch}"]
 
     def install
       bin.install "msstore"
