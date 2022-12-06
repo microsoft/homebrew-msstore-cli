@@ -1,6 +1,8 @@
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
 
+require_relative "../custom_download_strategy.rb"
+
 class MsstoreCli < Formula
     desc "Microsoft Store Command Line Tool"
     homepage "https://github.com/microsoft/msstore-cli"
@@ -21,7 +23,7 @@ class MsstoreCli < Formula
       raise "Unsupported arch #{Hardware::CPU.arch}"
     end
 
-    url "https://github.com/microsoft/msstore-cli/releases/download/v#{version}/MSStoreCLI-#{os}-#{arch}.tar.gz"
+    url "https://github.com/microsoft/msstore-cli/releases/download/v#{version}/MSStoreCLI-#{os}-#{arch}.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
     sha256 checksums["#{os}-#{arch}"]
 
     def install
