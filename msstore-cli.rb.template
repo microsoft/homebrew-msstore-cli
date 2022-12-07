@@ -1,5 +1,4 @@
-# Documentation: https://docs.brew.sh/Formula-Cookbook
-#                https://rubydoc.brew.sh/Formula
+require_relative "../custom_download_strategy.rb"
 
 class MsstoreCli < Formula
     desc "Microsoft Store Command Line Tool"
