@@ -1,5 +1,3 @@
-require_relative "../custom_download_strategy.rb"
-
 class MsstoreCli < Formula
     desc "Microsoft Store Command Line Tool"
     homepage "https://github.com/microsoft/msstore-cli"
@@ -20,7 +18,7 @@ class MsstoreCli < Formula
       raise "Unsupported arch #{Hardware::CPU.arch}"
     end
 
-    url "https://github.com/microsoft/msstore-cli/releases/download/v#{version}/MSStoreCLI-#{os}-#{arch}.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+    url "https://github.com/microsoft/msstore-cli/releases/download/v#{version}/MSStoreCLI-#{os}-#{arch}.tar.gz"
     sha256 checksums["#{os}-#{arch}"]
 
     def install
