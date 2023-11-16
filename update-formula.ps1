@@ -11,8 +11,8 @@ if ($version.StartsWith('v')) {
 
 Copy-Item $PSScriptRoot\msstore-cli.rb.template -Destination $PSScriptRoot\Formula\msstore-cli.rb -Force
 
-$x64osxContent = Get-Content MSStoreCLI-osx.12-x64.tar.gz.sha256.txt
-$arm64osxContent = Get-Content MSStoreCLI-osx.12-arm64.tar.gz.sha256.txt
+$x64osxContent = Get-Content MSStoreCLI-osx-x64.tar.gz.sha256.txt
+$arm64osxContent = Get-Content MSStoreCLI-osx-arm64.tar.gz.sha256.txt
 $x64linuxContent = Get-Content MSStoreCLI-linux-x64.tar.gz.sha256.txt
 $arm64linuxContent = Get-Content MSStoreCLI-linux-arm64.tar.gz.sha256.txt
 $x64osxSha = $x64osxContent.Split("  ")[0]

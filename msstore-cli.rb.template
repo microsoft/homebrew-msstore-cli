@@ -4,13 +4,13 @@ class MsstoreCli < Formula
     license "MIT"
     version "MSSTORECLI_VERSION"
     checksums = {
-      "osx.12-arm64" => "MSSTORECLI_OSX_ARM64_URLSHA256",
-      "osx.12-x64" => "MSSTORECLI_OSX_X64_URLSHA256",
+      "osx-arm64" => "MSSTORECLI_OSX_ARM64_URLSHA256",
+      "osx-x64" => "MSSTORECLI_OSX_X64_URLSHA256",
       "linux-arm64"  => "MSSTORECLI_LINUX_ARM64_URLSHA256",
       "linux-x64"  => "MSSTORECLI_LINUX_X64_URLSHA256"
     }
 
-    os = OS.mac? ? "osx.12" : "linux"
+    os = OS.mac? ? "osx" : "linux"
     arch = case Hardware::CPU.arch
     when :x86_64 then "x64"
     when :arm64 then "arm64"
