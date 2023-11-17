@@ -2,15 +2,15 @@ class MsstoreCli < Formula
     desc "Microsoft Store Command Line Tool"
     homepage "https://github.com/microsoft/msstore-cli"
     license "MIT"
-    version "0.1.25"
+    version "0.1.26"
     checksums = {
-      "osx.12-arm64" => "21d142f57d6f9827e8786c041ff7479b55436164873f24f1598b2a5fb0614b88",
-      "osx.12-x64" => "9fbb485ec355a60fd5c8aaf9fe5ff83a2d9d2ef1cd1b544c09ac96359aa5a76c",
-      "linux-arm64"  => "8a7051908036dac6c7478c82459cc64342c100da806713253695ba9aed154076",
-      "linux-x64"  => "000dea05eabd7dca8f7f38b7e270b252b3bbbc873460380d62dc6e04d134ee21"
+      "osx-arm64" => "fca3222f3ce36e81d8d9e8e06a0a1128c7a9348123a859fd752052fced73ac64",
+      "osx-x64" => "5b21d623d44260956ed7d71e27a92a40609e03e69025137bc997530248ac6539",
+      "linux-arm64"  => "3f059c1c9017541cc986f208d6e37171596ac8cd827253590525feb6a5357823",
+      "linux-x64"  => "ec14b3dad5de0935ed4aed16f98d00bfb88fe04064d6af7d2b839f14a291b1e0"
     }
 
-    os = OS.mac? ? "osx.12" : "linux"
+    os = OS.mac? ? "osx" : "linux"
     arch = case Hardware::CPU.arch
     when :x86_64 then "x64"
     when :arm64 then "arm64"
