@@ -2,12 +2,12 @@ class MsstoreCli < Formula
     desc "Microsoft Store Command Line Tool"
     homepage "https://github.com/microsoft/msstore-cli"
     license "MIT"
-    version "0.1.26"
+    version "0.1.27"
     checksums = {
-      "osx-arm64" => "fca3222f3ce36e81d8d9e8e06a0a1128c7a9348123a859fd752052fced73ac64",
-      "osx-x64" => "5b21d623d44260956ed7d71e27a92a40609e03e69025137bc997530248ac6539",
-      "linux-arm64"  => "3f059c1c9017541cc986f208d6e37171596ac8cd827253590525feb6a5357823",
-      "linux-x64"  => "ec14b3dad5de0935ed4aed16f98d00bfb88fe04064d6af7d2b839f14a291b1e0"
+      "osx-arm64" => "11cc5695624098dbcc73cc8748a71c3f674b6afcc33b380c5c8af7f17e3fbf5b",
+      "osx-x64" => "6704931265cf3f75aadfd234b6246fbcceded35a7e868b4295a0754c53a3cdef",
+      "linux-arm64"  => "3727cd12dd0fc3510c7f3bb971f97c80cc8abfe5df056e25b93c8e59f7af575f",
+      "linux-x64"  => "4f27d6c7a3d30cbc77f38d37fec2faf53c1e4e7806191919e2a84e59acb8050e"
     }
 
     os = OS.mac? ? "osx" : "linux"
